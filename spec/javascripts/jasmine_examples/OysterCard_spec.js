@@ -20,5 +20,9 @@ describe("oysterCard", function () {
             oystercard.deposit(5)
             expect(oystercard.balance).toEqual(5)
         })
+
+        it('throw and error if max balance exceeded', function() {
+            expect(function(){oystercard.deposit(51)}).toThrow(new Error("max balance exceeded"))
+        })
     })
 });
