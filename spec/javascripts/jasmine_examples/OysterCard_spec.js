@@ -24,5 +24,11 @@ describe("oysterCard", function () {
         it('throw and error if max balance exceeded', function() {
             expect(function(){oystercard.deposit(51)}).toThrow(new Error("max balance exceeded"))
         })
+
+        it('have money deducted for payment', function() {
+            oystercard.deposit(15)
+            oystercard.payment(5)
+            expect(oystercard.balance).toEqual(10)
+        })
     })
 });
