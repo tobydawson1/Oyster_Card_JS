@@ -33,9 +33,18 @@ describe("oysterCard", function () {
     })
 
     describe('it knows', function() {
-        it('when its in a journey', function() {
+
+        it('when it is and is not in a journey', function() {
+            oystercard.deposit(40)
             oystercard.touchIn()
             expect(oystercard.inJourney).toEqual(true)
+            oystercard.touchOut()
+            expect(oystercard.inJourney).toEqual(false)
+        })
+
+        it('when you do not have the minimum fare balance', function() {
+            expect(function(){oystercard.touchIn()}).toThrow(new Error("minimum fare not met"))
         })
     })
+
 });
