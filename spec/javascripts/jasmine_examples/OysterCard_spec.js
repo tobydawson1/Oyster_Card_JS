@@ -31,4 +31,11 @@ describe("oysterCard", function () {
             expect(oystercard.balance).toEqual(10)
         })
     })
+
+    describe('it knows', function() {
+        it('when its in a journey', function() {
+            oystercard.touchIn()
+            expect(oystercard.inJourney).toEqual(true)
+        })
+    })
 });
