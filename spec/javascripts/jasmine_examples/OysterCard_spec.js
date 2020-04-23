@@ -16,6 +16,9 @@ describe("oysterCard", function () {
     })
 
     describe('it can', function() {
-        it('can ')
+        it('deposit money to the card', function() {
+            oystercard.deposit(5)
+            expect(oystercard.balance).toEqual(5)
+        })
     })
 });
