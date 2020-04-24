@@ -13,26 +13,6 @@ describe("oysterCard", function () {
         it('starts with a balance of 0', function() {
             expect(oystercard.balance).toEqual(0)
         })
-    })
-
-    describe('it can', function() {
-        it('deposit money to the card', function() {
-            oystercard.deposit(5)
-            expect(oystercard.balance).toEqual(5)
-        })
-
-        it('throw and error if max balance exceeded', function() {
-            expect(function(){oystercard.deposit(51)}).toThrow(new Error("max balance exceeded"))
-        })
-
-        it('have money deducted for payment', function() {
-            oystercard.deposit(15)
-            oystercard.payment(5)
-            expect(oystercard.balance).toEqual(10)
-        })
-    })
-
-    describe('it knows', function() {
 
         it('when it is and is not in a journey', function() {
             oystercard.deposit(40)
@@ -47,4 +27,21 @@ describe("oysterCard", function () {
         })
     })
 
-});
+    describe('it can', function() {
+        it('deposit money to the card', function() {
+            oystercard.deposit(5)
+            expect(oystercard.balance).toEqual(5)
+        })
+
+        it('throw and error if max balance exceeded', function() {
+            expect(function(){oystercard.deposit(51)}).toThrow(new Error("max balance exceeded"))
+        })
+
+        it('have money deducted for payment', function() {
+            oystercard.deposit(15)
+            oystercard.touchIn()
+            oystercard.touchOut()
+            expect(oystercard.balance).toEqual(14)
+        })
+    })
+})

@@ -1,6 +1,7 @@
 function OysterCard() {
     this.balance = 0
     this.inJourney = false
+    this.charge = 1
 };
 
 OysterCard.prototype.deposit = function(amount) {
@@ -24,6 +25,6 @@ OysterCard.prototype.touchIn = function() {
 }
 
 OysterCard.prototype.touchOut = function() {
+    this.payment(this.charge) 
     this.inJourney = false
 }
-
