@@ -43,5 +43,6 @@ describe("oysterCard", function () {
             oystercard.touchOut()
             expect(oystercard.balance).toEqual(14)
         })
+
     })
 })
