@@ -3,12 +3,15 @@ function Journey() {
 };
 
 Journey.prototype.setEntryStation = function(name, zone) {
-    this.entryStation = name
-    this.entryZone = zone
+    this.entryStationAndZone = [name, zone]
 }
 
-journey.prototype.setExitStation = function(name, zone) {
-    this.exitStation = name
-    this.exitZone = zone
+Journey.prototype.setExitStation = function(name, zone) {
+    this.exitStationAndZone = [name, zone]
+}
+
+Journey.prototype.setHistory = function() {
+    this.completeJourney = [this.entryStationAndZone, this.exitStationAndZone]
+    this.journeyHistory.push(this.completeJourney)
 }
 

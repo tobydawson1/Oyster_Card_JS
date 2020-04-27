@@ -4,9 +4,13 @@ describe("journey", function() {
         journey = new Journey();
     })
 
-    describe("has", function() {
-        it('holds previous journeys', function() {
-            expect(journey.journeyHistory).toEqual([])
+    describe("holds", function() {
+        it('previous journeys', function() {
+            journey.setEntryStation("Stockwell", 2)
+            journey.setExitStation("Bank", 1)
+            journey.setHistory()
+            expect(journey.journeyHistory).toEqual([[["Stockwell", 2], ["Bank", 1]]])
         })
+
     })
 })
