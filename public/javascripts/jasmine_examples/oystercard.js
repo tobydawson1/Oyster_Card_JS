@@ -18,7 +18,7 @@ OysterCard.prototype.payment = function(amount) {
 }
 
 OysterCard.prototype.touchIn = function() {
-    if (this.balance < 1) {
+    if (this.balance < this.charge) {
         throw new Error("minimum fare not met")
     } else {
         this.inJourney = true
