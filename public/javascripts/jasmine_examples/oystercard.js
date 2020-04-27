@@ -2,10 +2,11 @@ function OysterCard() {
     this.balance = 0
     this.inJourney = false
     this.charge = 1
+    this.maxBalance = 50
 };
 
 OysterCard.prototype.deposit = function(amount) {
-    if (amount > 50) {
+    if (amount > this.maxBalance) {
         throw new Error("max balance exceeded")
     } else {
         this.balance += amount 
