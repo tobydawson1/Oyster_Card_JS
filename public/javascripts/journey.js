@@ -12,6 +12,7 @@ Journey.prototype.setEntryStation = function(name, zone) {
 Journey.prototype.setExitStation = function(name, zone) {
     this.exitStation = name
     this.exitStationAndZone = [name, zone]
+    this.setHistory()
 }
 
 Journey.prototype.setHistory = function() {
