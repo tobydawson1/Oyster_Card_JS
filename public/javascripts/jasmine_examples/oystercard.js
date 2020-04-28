@@ -3,6 +3,8 @@ function OysterCard() {
     this.inJourney = false
     this.charge = 1
     this.maxBalance = 50
+    this.penalty = 5
+    this.journey = new Journey()
 };
 
 OysterCard.prototype.deposit = function(amount) {
@@ -23,14 +25,18 @@ OysterCard.prototype.touchIn = function(name, zone) {
     } else {
         this.inJourney = true
     }
-    this.journey = new Journey()
     this.journey.setEntryStation(name, zone)
 }
 
 OysterCard.prototype.touchOut = function(name, zone) {
+    if (this.inJourney == false) {
+        this.balance -= this.penalty
+    } else {
     this.payment(this.charge) 
     this.inJourney = false
+    }
     this.journey.setExitStation(name, zone)
     this.journey.journeyHistory
 }
+
 
