@@ -44,9 +44,16 @@ describe("oysterCard", function () {
             expect(oystercard.balance).toEqual(14)
         })
 
-        it('will deduct a penalty if i dont touch out', function() {
+        it('will deduct a penalty if i dont touch in', function() {
             oystercard.deposit(10)
             oystercard.touchOut()
+            expect(oystercard.balance).toEqual(5)
+        })
+
+        it('will deduct a penalty if i dont touch out', function() {
+            oystercard.deposit(10)
+            oystercard.touchIn()
+            oystercard.touchIn()
             expect(oystercard.balance).toEqual(5)
         })
 
