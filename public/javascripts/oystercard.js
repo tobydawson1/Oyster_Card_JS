@@ -35,11 +35,10 @@ OysterCard.prototype.touchOut = function(name, zone) {
     if (this.inJourney == false) {
         this.balance -= this.penalty
     } else {
-    this.payment(this.charge) 
-    this.inJourney = false
+        this.journey.setExitStation(name, zone)
+        this.payment(this.journey.calculatePrice()) 
+        this.inJourney = false
     }
-    this.journey.setExitStation(name, zone)
-    this.journey.journeyHistory
 }
 
 exports.OysterCard = OysterCard;

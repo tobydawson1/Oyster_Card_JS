@@ -4,6 +4,8 @@ function Journey() {
     this.entryStation = undefined 
     this.exitStation = undefined
     this.fare = undefined
+    this.exitZone = undefined
+    this.entryZone = undefined
     this.basicFare = 1
 
 };
@@ -33,8 +35,7 @@ Journey.prototype.calculatePrice = function() {
     } else
         this.fare = this.entryZone - this.exitZone 
         Math.abs(this.fare)
-        this.fare += this.basicFare
-
+        return this.fare += this.basicFare
 }
 
     exports.Journey = Journey;

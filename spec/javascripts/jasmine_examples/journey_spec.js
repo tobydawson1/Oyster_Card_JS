@@ -11,6 +11,12 @@ describe("journey", function() {
             expect(journey.journeyHistory).toEqual([[["Stockwell", 2], ["Bank", 1]]])
         })
 
+        it('calculates price', function() {
+            journey.setEntryStation("Stockwell", 2)
+            journey.setExitStation("Bank", 1)
+            expect(journey.calculatePrice()).toEqual(2)
+        })
+
     })
 
 

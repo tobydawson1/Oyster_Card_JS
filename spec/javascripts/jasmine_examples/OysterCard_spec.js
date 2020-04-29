@@ -39,9 +39,9 @@ describe("oysterCard", function () {
 
         it('have money deducted for payment', function() {
             oystercard.deposit(15)
-            oystercard.touchIn()
-            oystercard.touchOut()
-            expect(oystercard.balance).toEqual(14)
+            oystercard.touchIn("Stockwell", 2)
+            oystercard.touchOut("Bank", 1)
+            expect(oystercard.balance).toEqual(13)
         })
 
         it('will deduct a penalty if i dont touch in', function() {
