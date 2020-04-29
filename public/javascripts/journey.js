@@ -1,9 +1,11 @@
+(function(exports) {
 function Journey() {
     this.journeyHistory = []
     this.entryStation = undefined 
     this.exitStation = undefined
     this.fare = undefined
     this.basicFare = 1
+
 };
 
 Journey.prototype.setEntryStation = function(name, zone) {
@@ -31,8 +33,10 @@ Journey.prototype.calculatePrice = function() {
     } else
         this.fare = this.entryZone - this.exitZone 
         Math.abs(this.fare)
-        this.fare += basicFare
+        this.fare += this.basicFare
 
 }
 
+    exports.Journey = Journey;
 
+})(this);

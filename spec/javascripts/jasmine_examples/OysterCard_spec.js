@@ -57,5 +57,11 @@ describe("oysterCard", function () {
             expect(oystercard.balance).toEqual(5)
         })
 
+        it('will store journeys', function() {
+            oystercard.deposit(40)
+            oystercard.touchIn("Stockwell", 2)
+            oystercard.touchOut("Bank", 1)
+            expect(oystercard.journey.journeyHistory).toEqual([[["Stockwell", 2], ["Bank", 1]]])
+        })
     })
 })

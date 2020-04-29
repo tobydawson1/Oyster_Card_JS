@@ -13,9 +13,5 @@ describe("journey", function() {
 
     })
 
-    describe("can calculate"), function() {
-        it('fare across zones', function() {
-            
-        })
-    }
+
 })

@@ -1,3 +1,4 @@
+(function(exports) {
 function OysterCard() {
     this.balance = 0
     this.inJourney = false
@@ -41,4 +42,6 @@ OysterCard.prototype.touchOut = function(name, zone) {
     this.journey.journeyHistory
 }
 
+exports.OysterCard = OysterCard;
 
+})(this); 
