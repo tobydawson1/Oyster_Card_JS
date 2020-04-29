@@ -63,5 +63,19 @@ describe("oysterCard", function () {
             oystercard.touchOut("Bank", 1)
             expect(oystercard.journey.journeyHistory).toEqual([[["Stockwell", 2], ["Bank", 1]]])
         })
+
+        it('have correct money deducted for payment depnding on Zone', function() {
+            oystercard.deposit(15)
+            oystercard.touchIn("Mordon", 4)
+            oystercard.touchOut("Bank", 1)
+            expect(oystercard.balance).toEqual(11)
+        })
+
+        it('have correct money deducted for payment if they stayed in same zone', function() {
+            oystercard.deposit(15)
+            oystercard.touchIn("Embankment", 1)
+            oystercard.touchOut("Bank", 1)
+            expect(oystercard.balance).toEqual(14)
+        })
     })
 })

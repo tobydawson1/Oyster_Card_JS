@@ -32,6 +32,7 @@ Journey.prototype.setHistory = function() {
 Journey.prototype.calculatePrice = function() {
     if (this.entryZone == this.exitZone) {
         this.fare = 1
+        return this.fare
     } else
         this.fare = this.entryZone - this.exitZone 
         Math.abs(this.fare)
