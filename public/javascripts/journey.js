@@ -34,8 +34,7 @@ Journey.prototype.calculatePrice = function() {
         this.fare = 1
         return this.fare
     } else
-        this.fare = this.entryZone - this.exitZone 
-        Math.abs(this.fare)
+        this.fare = Math.abs(this.entryZone - this.exitZone);
         return this.fare += this.basicFare
 }
 

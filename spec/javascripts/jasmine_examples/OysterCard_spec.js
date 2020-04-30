@@ -77,5 +77,19 @@ describe("oysterCard", function () {
             oystercard.touchOut("Bank", 1)
             expect(oystercard.balance).toEqual(14)
         })
+
+        it('knows the right price if you travel between 2 zones', function() {
+            oystercard.deposit(15)
+            oystercard.touchIn("Embankment", 1)
+            oystercard.touchOut("Bank", 3)
+            expect(oystercard.journey.calculatePrice()).toEqual(3)
+        })
+
+        it('knows the right price if you travel between 2 zones', function() {
+            oystercard.deposit(15)
+            oystercard.touchIn("Embankment", 1)
+            oystercard.touchOut("Bank", 3)
+            expect(oystercard.balance).toEqual(12)
+        })
     })
 })
