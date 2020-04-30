@@ -1,12 +1,12 @@
 (function(exports) {
 function Journey() {
     this.journeyHistory = []
-    this.entryStation = undefined 
-    this.exitStation = undefined
-    this.fare = undefined
-    this.exitZone = undefined
-    this.entryZone = undefined
     this.basicFare = 1
+    this.entryStation
+    this.exitStation
+    this.fare
+    this.exitZone
+    this.entryZone 
 
 };
 
