@@ -4,7 +4,7 @@ function OysterCard() {
     this.inJourney = false
     this.charge = 1
     this.maxBalance = 50
-    this.penalty = 5
+    this.penalty = 6
     this.journey = new Journey()
 };
 

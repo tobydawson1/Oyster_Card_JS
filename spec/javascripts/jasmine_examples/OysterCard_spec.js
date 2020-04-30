@@ -47,14 +47,14 @@ describe("oysterCard", function () {
         it('will deduct a penalty if i dont touch in', function() {
             oystercard.deposit(10)
             oystercard.touchOut()
-            expect(oystercard.balance).toEqual(5)
+            expect(oystercard.balance).toEqual(4)
         })
 
         it('will deduct a penalty if i dont touch out', function() {
             oystercard.deposit(10)
             oystercard.touchIn()
             oystercard.touchIn()
-            expect(oystercard.balance).toEqual(5)
+            expect(oystercard.balance).toEqual(4)
         })
 
         it('will store journeys', function() {
@@ -85,7 +85,7 @@ describe("oysterCard", function () {
             expect(oystercard.journey.calculatePrice()).toEqual(3)
         })
 
-        it('knows the right price if you travel between 2 zones', function() {
+        it('deducts the right amount if you travel between 2 zones', function() {
             oystercard.deposit(15)
             oystercard.touchIn("Embankment", 1)
             oystercard.touchOut("Bank", 3)
