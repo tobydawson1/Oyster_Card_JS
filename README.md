@@ -10,7 +10,7 @@ The taks is to create a Oyster Card clone. The programme must be able to calulat
 
 ## Testing
 
-(Testing)[screenshots/testing.png]
+![Testing](screenshots/testing.png)
 
 ## <a name="Stories">User Stories</a>
 
