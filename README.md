@@ -2,7 +2,7 @@
 
 # Oystercard Challenge - JavaScript Edition
 
-[Task](#Task) | [Jasmine Testing](#Testing) | [User Stories](#Stories) |
+[Task](#Task) | [Jasmine Testing](#Testing) | [Functions and Methods](#Methods) |[User Stories](#Stories) |
 
 ## Task
 
@@ -11,6 +11,23 @@ The taks is to create a Oyster Card clone. The programme must be able to calulat
 ## Testing
 
 ![Testing](screenshots/testing.png)
+
+## <a name="Methods">Functions and Methods</a>
+
+| Object:          | Account                                            | 
+| ---------------- | -------------------------------------------------- | 
+| **Properties:**  | statement, balance                                 |
+| **Function:**    | print_statement                                    |
+| **Function:**    | Deposit                                            |  
+| **Function:**    | Withdrawal                                         |  
+
+
+| Object:          | Statement                                          | 
+| ---------------- | -------------------------------------------------- | 
+| **Properties:**  |                                                    |
+| **Function:**    | create_statement                                   |
+| **Function:**    | Deposit                                            |  
+| **Function:**    | Withdrawal                                         |  
 
 ## <a name="Stories">User Stories</a>
 
