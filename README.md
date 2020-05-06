@@ -6,7 +6,7 @@
 
 ## Task
 
-The taks is to create a Oyster Card clone. The programme must be able to calulate fare cost, know if you are touching in and out and be tested fully.
+The taks is to create an Oyster Card clone. The programme must be able to calulate fare cost, knows if you are touching in and out and to be tested fully.
 
 ## Testing
 
@@ -14,20 +14,22 @@ The taks is to create a Oyster Card clone. The programme must be able to calulat
 
 ## <a name="Methods">Functions and Methods</a>
 
-| Object:          | Account                                            | 
+| Object:          | oysterCard                                            | 
 | ---------------- | -------------------------------------------------- | 
-| **Properties:**  | statement, balance                                 |
-| **Function:**    | print_statement                                    |
+| **Properties:**  | balance                                 |
+| **Function:**    | payment                                    |
 | **Function:**    | Deposit                                            |  
-| **Function:**    | Withdrawal                                         |  
+| **Function:**    | touchIn                                         |  
+| **Function:**    | touchOut                                         | 
 
 
-| Object:          | Statement                                          | 
+| Object:          | journey                                          | 
 | ---------------- | -------------------------------------------------- | 
-| **Properties:**  |                                                    |
-| **Function:**    | create_statement                                   |
-| **Function:**    | Deposit                                            |  
-| **Function:**    | Withdrawal                                         |  
+| **Properties:**  | History                                             |
+| **Function:**    | setHistory                                  |
+| **Function:**    | calculatePrice                                           |  
+| **Function:**    | setExitStation                                         | 
+| **Function:**    | setEntryStation                                         |  
 
 ## <a name="Stories">User Stories</a>
 
