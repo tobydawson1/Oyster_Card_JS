@@ -2,11 +2,15 @@
 
 # Oystercard Challenge - JavaScript Edition
 
-[Task](#Task) | [User Stories](#Stories) | [Bowling — how does it work?](#Bowling) |
+[Task](#Task) | [Jasmine Testing](#Testing) | [User Stories](#Stories) |
 
 ## Task
 
 The taks is to create a Oyster Card clone. The programme must be able to calulate fare cost, know if you are touching in and out and be tested fully.
+
+## Testing
+
+(Testing)[screenshots/testing.png]
 
 ## <a name="Stories">User Stories</a>
 
